@@ -8,7 +8,7 @@ public class Product {
     int Cantidad;
     int IdProducto;
     String Nombre;
-    InputStream Foto;
+    String RutaFoto;
     String Descripcion;
     double Precio;
     int Stock;
@@ -23,11 +23,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(int Cantidad, int IdProducto, String Nombre, InputStream Foto, String Descripcion, double Precio, int Stock, int item, String contrasena, String usu_correo_vendedor, int id_usu, int cantidad_origin, String pro_expiration_date, String pro_batch_date) {
+    public Product(int Cantidad, int IdProducto, String Nombre, String RutaFoto, String Descripcion, double Precio, int Stock, int item, String contrasena, String usu_correo_vendedor, int id_usu, int cantidad_origin, String pro_expiration_date, String pro_batch_date) {
         this.Cantidad = Cantidad;
         this.IdProducto = IdProducto;
         this.Nombre = Nombre;
-        this.Foto = Foto;
+        this.RutaFoto = RutaFoto;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
         this.Stock = Stock;
@@ -153,12 +153,12 @@ public class Product {
         this.Nombre = Nombre;
     }
 
-    public InputStream getFoto() {
-        return Foto;
+    public String getRutaFoto() {
+        return RutaFoto;
     }
 
-    public void setFoto(InputStream Foto) {
-        this.Foto = Foto;
+    public void setRutaFoto(String Foto) {
+        this.RutaFoto = RutaFoto;
     }
 
     public String getDescripcion() {
