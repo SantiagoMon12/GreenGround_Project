@@ -293,6 +293,8 @@ public class carcontroller {
         Document document = new Document(pdf);
         document.setMargins(20, 20, 20, 20);
 
+        
+        
         document.add(new Paragraph("Nombre del Producto: " + productos.get("Pro_Nombre").toString()));
         document.add(new Paragraph("Precio del Producto: " + productos.get("Pro_Precio").toString()));
         document.add(new Paragraph("Cantidad Producto: " + productos.get("Car_Cantidad").toString()));
