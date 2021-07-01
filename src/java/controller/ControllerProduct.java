@@ -5,14 +5,20 @@
  */
 package controller;
 
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
 import dao.DaoProduct;
 import dao.cardao;
 import dbconect.dbconect;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import model.Product;
 import validation.ValidationProduct;
 import org.springframework.dao.DataAccessException;
@@ -51,8 +57,8 @@ public class ControllerProduct {
         ModelAndView mav = new ModelAndView();
         DaoProduct DaoProduct = new DaoProduct();
         int iduser = Integer.parseInt(request.getParameter("id"));
-        mav.addObject("id",iduser);
-        mav.addObject("shop",DaoProduct.viewdshops(iduser));
+        mav.addObject("id", iduser);
+        mav.addObject("shop", DaoProduct.viewdshops(iduser));
         mav.addObject("product", new Product());
         mav.setViewName("sub/sellprods");
         return mav;
@@ -205,4 +211,6 @@ public class ControllerProduct {
             }
         });
     }
+
+    
 }

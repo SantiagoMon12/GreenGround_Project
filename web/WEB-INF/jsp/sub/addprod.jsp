@@ -32,7 +32,7 @@
         <br><br>
         <CENTER><h1><b>¡Nuevo Producto!</b></h1></CENTER>
         <br><br>
-        <form:form commandName="product" method="post">
+        <form:form commandName="product" method="post" enctype="multipart/form-data">
             <table class="tb1">
                 <form:errors path="*" element="div" cssClass="alert alert-danger"/>
                 <tr>
@@ -41,7 +41,6 @@
                 </tr>
                 <tr>
                     <td> <form:label  path="Descripcion">Descripcion producto </form:label></td>
-    <%--            s<td> <form:input required="true" style="width:350px" placeholder="Tomate" cssClass="form-control" path="Descripcion" class="input"></form:input></td> --%>
                     <td>
                         <textarea placeholder="Escribe aqui la descripcion de su producto..." id="Descripcion" name="Descripcion"
                         cols="54" rows="5" style="width:350px" ></textarea>
@@ -63,7 +62,6 @@
                     <td><form:label  path="pro_batch_date">Fecha lote producto</form:label></td>
                     <td><input id="pro_batch_date" class="input" name="pro_batch_date" class="form-control" type="date" required="true" style="width:350px"></td>
                 </tr>
-
                 <form:hidden path="id_usu" value="${id}"></form:hidden>
             </table><br>
             <center>

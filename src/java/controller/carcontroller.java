@@ -13,6 +13,8 @@ import com.itextpdf.layout.element.AreaBreak;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
 import dao.DaoProduct;
 import dao.cardao;
 import dao.clidao;
